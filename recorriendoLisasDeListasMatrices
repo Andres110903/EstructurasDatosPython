@@ -1,0 +1,33 @@
+# Recorriendo por filas
+# ejemplo con martiz de información de vuelos de un aeropuerto
+#            hora     vuelo      destino         puerta    estado
+salidas = [['00:05', 'LA622', 'Ciudad de Mexico', 'E21', 'SALIDO'],
+           ['00:49', 'LA578', 'Bogota', 'E09', 'SALIDO'],
+           ['01:50', 'CM276', 'Panama', 'C06', 'CANCELADO'],
+           ['02:05', 'AV240', 'Punta Arenas', 'P25', 'ATRASADO'],
+           ['04:45', 'LA380', 'Arica', 'P21', 'EMBARCADO']]
+
+for fila in salidas:
+     print(fila)
+     for elem in fila: # recorre cada elemento la lista (que es otra lista)
+          print(elem)
+
+fil = len(salidas)
+col = len(salidas[0])
+
+print("\nFilas:", fil)
+print("Columnas:", col)
+
+for i in range(fil):
+     for j in range(col):
+          print(salidas[i][j], end=" ") # recorremos toda la matriz, para cada fila i imprimios sus columnas j
+     print(' ') # para dejar un espacio entre cada fila
+
+
+# ¿Cuáles cuelos están atrasados?
+result = []
+
+for i in range(len(salidas)):
+     if salidas[i][4] == "ATRASADO": # comprobar que lo que esté en la columna 4 sea 'ATRASADO'
+          result.append(salidas[i][1]) # guardar las coinicidencias en la lista "result"
+print("\nEl codigo del vuelo atrasado es:", result)
