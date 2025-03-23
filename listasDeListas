@@ -1,0 +1,33 @@
+# ESTRUCTURA DE UNA LISTA DE LISTAS
+
+# listas separadas
+e1 = [86, 70, 85]
+e2 = [40, 55, 28]
+e3 = [98, 50, 86]
+e4 = [33, 78, 77]
+
+#print(e1)
+
+# lista de listas, ya que cada elemento de la lista es una lista
+# metodo 1
+m1 = [e1, e2, e3, e4]
+#      0   1   2   3
+print(m1)
+
+# metodo 2
+m2 = [[86, 70, 85], # 0
+     [40, 55, 28],  # 1
+     [98, 50, 86],  # 2
+     [33, 78, 77]]  # 3
+print(m2)
+# ambos metodos son iguales
+
+print("\nFila 1, posición 0:", m2[0])
+
+# Seguir orden de filas-columnas
+print("\nElemento 33 de la fila 3, columna 0: ", m2[3][0])
+print("\nElemento 28 de la fila 1, columna 2: ", m2[1][2])
+
+# Para cambiar un valor de la lista
+m2[1][0] = 33
+print(m2)
